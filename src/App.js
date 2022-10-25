@@ -31,17 +31,6 @@ function App() {
     getMeals();
   };
 
-  /* const handleSubmit = (e) => {
-    e.preventDefault();
-    getMeals();
-
-      <SearchBar
-        handleSubmit={handleSubmit}
-        value={query}
-        onChange={(e) => setTerm(e.target.value)}
-      />
-  };*/
-
   return (
     <div className="container">
       <Header />
