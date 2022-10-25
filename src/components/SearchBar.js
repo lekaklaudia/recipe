@@ -1,3 +1,4 @@
+import { useState } from "react";
 import React from "react";
 
 const SearchBar = ({ handleSubmit, value, onChange }) => {
@@ -9,9 +10,11 @@ const SearchBar = ({ handleSubmit, value, onChange }) => {
         value={value}
         onChange={onChange}
       />
-      <button type="submit" value="Search" className="btn"></button>
     </form>
   );
 };
 
 export default SearchBar;
+/*<button type="submit" value="Search" className="btn">
+ Search
+ </button>*/
