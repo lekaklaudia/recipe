@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&display=swap");
+@import "color.scss";
+
+//Fonts Varibles Declaration
+$fontH1: 60px;
+$fontH2: 52px;
+$fontH3: 44;
+$fontH4: 36;
+$fontH5: 28;
+$fontH6: 20;
+$fontP: 16;
+$fontSpan: 16;
+$fontLink: 18;
+
+body {
+  font-family: "Lora", serif;
+}
+
+h1 {
+  font-size: $fontH1;
+  font-weight: 600;
+  color: $primaryColor1;
+}
+
+h2 {
+  font-size: $fontH2;
+  font-weight: 500;
+}
+h3 {
+  font-size: $fontH3;
+  font-weight: 600;
+  color: $primaryColor3;
+}
+h4 {
+  font-size: $fontH4;
+  font-weight: 400;
+}
+h5 {
+  font-size: $fontH5;
+  font-weight: 400;
+}
+h6 {
+  font-size: $fontH6;
+  font-weight: 400;
+}
+p {
+  font-size: $fontP;
+  font-weight: 400;
+  color: $primaryColor2;
+}
+
+span {
+  font-size: $fontSpan;
+  font-weight: 400;
+  color: $primaryColor2;
+}

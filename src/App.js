@@ -2,31 +2,45 @@ import { useState, useEffect } from "react";
 import FetchData from "./components/FetchData";
 
 import "./style/index.scss";
+import Header from "./components/Header";
 import SearchBar from "./components/SearchBar";
 import FoodCard from "./components/FoodCard";
 
 function App() {
   const [loading, setLoading] = useState(false);
   const [term, setTerm] = useState(null);
-  const [recipe, setRecipe] = useState(null);
+  const [recipe, setRecipe] = useState([]);
 
   useEffect(() => {
     const getMeals = async () => {
-      const response = await FetchData();
-      setRecipe(response.data);
+      const { data } = await FetchData();
+      setRecipe(data.meals);
     };
 
     getMeals();
-    console.log(recipe);
   }, []);
+  console.log(recipe);
+
+  /* const handleSubmit = (e) => {
+    e.preventDefault();
+    getMeals();
+
+      <SearchBar
+        handleSubmit={handleSubmit}
+        value={query}
+        onChange={(e) => setTerm(e.target.value)}
+      />
+  };*/
 
   return (
     <div className="container">
-      <h2>Search Recipe</h2>
-
-      {recipe
-        ? recipe.map((rec) => <FoodCard key={rec.idMeal} recipe={rec} />)
-        : "Search Another Recipe"}
+      <Header />
+      <h1>Search Recipe</h1>
+      <div className="recipe">
+        {recipe
+          ? recipe.map((rec, index) => <FoodCard key={index} recipe={rec} />)
+          : "Search Another Recipe"}
+      </div>
     </div>
   );
 }
